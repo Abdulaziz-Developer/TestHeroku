@@ -25,7 +25,7 @@ function setUpRoutes(app) {
         console.log(decodedToken);
         const user = await userModel.findById(decodedToken.sub);
         if (!user) {
-          console.log("you dont have permisson");
+          res.send("you dont have permisson");
         }
         // jwt.verify(token, salt);
         res.send(user);
