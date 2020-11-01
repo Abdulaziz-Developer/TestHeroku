@@ -27,7 +27,7 @@ require('dotenv').config()
         console.log("app routes is set up lets listen to the port ")
 
 
-      app.listen(4000);
+      app.listen(process.env.PORT || 4000);
       } catch (error) {
         console.error(error)
       }
