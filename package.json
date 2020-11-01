@@ -18,7 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": " nodemon index.js"
+    "start": " nodemon index.js",
+    "build": " node index.js"
   },
   "author": "",
   "license": "UNLICENSED"
