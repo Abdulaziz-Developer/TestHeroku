@@ -107,7 +107,7 @@ function setUpRoutes(app) {
 
         theUser.Courses[index].completed = true;
 
-        res.send(theUser)
+        res.send(lesson)
       }else{
         res.statusCode = 403;
         res.send("There's something wrong !")
