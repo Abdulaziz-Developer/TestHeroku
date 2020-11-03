@@ -105,7 +105,7 @@ function setUpRoutes(app) {
 
         const index = theUser.Courses.indexOf(lesson[0]);
 
-        theUser.Courses[index].completed = true;
+        theUser.Courses[index].completed = {$set : [{ completed : true}]};
 
         res.send(lesson)
       }else{
