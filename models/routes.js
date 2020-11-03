@@ -95,7 +95,7 @@ function setUpRoutes(app) {
       console.log(error);
     }
   });
-  app.post("/completed/:id" , async(req,res) => {
+  app.put("/completed/:id" , async(req,res) => {
     const {id} = req.params
     
     try {
