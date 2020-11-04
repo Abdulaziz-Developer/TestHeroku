@@ -5,6 +5,8 @@ const userSchema = new Schema({
   username: String,
   email: { type: String, unique: true },
   password: String,
+  number: Number,
+  city: String,
   salt: String,
   Courses: [
     { title: String, completed: Boolean },

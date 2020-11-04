@@ -54,6 +54,8 @@ function setUpRoutes(app) {
       const newUser = new userModel({
         username,
         email,
+        number,
+        city,
         password,
       });
 
