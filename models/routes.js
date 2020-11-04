@@ -37,11 +37,13 @@ function setUpRoutes(app) {
   });
 
   app.post("/register", urlencodedParser, async (req, res) => {
-    const { username, email, password } = req.body;
+    const { username, email, password , city , number } = req.body;
     const bodySchema = Joi.object({
       email: Joi.string().email().required(),
       username: Joi.string().required(),
-      password: Joi.string().min(6).required(),
+      password: Joi.string().min(4).required(),
+      city: Joi.string().required(),
+      number: Joi.number().min(8).required(),
     });
     const validationResult = bodySchema.validate(req.body);
 
