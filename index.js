@@ -11,7 +11,7 @@ const start = async () => {
       useUnifiedTopology: true,
       useCreateIndex: true,
     });
-    console.log("Connected to mongoDB");
+    console.log("Connected to mongoDB ");
 
     const app = express();
 
