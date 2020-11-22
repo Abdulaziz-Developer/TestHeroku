@@ -7,18 +7,7 @@ const userSchema = new Schema({
   password: String,
   number: String,
   city: String,
-  salt: String,
-  Courses: [
-    { title: String, completed: Boolean },
-    { title: String, completed: Boolean },
-    { title: String, completed: Boolean },
-    { title: String, completed: Boolean },
-    { title: String, completed: Boolean },
-    { title: String, completed: Boolean },
-    { title: String, completed: Boolean },
-    { title: String, completed: Boolean },
-    { title: String, completed: Boolean },
-  ],
+  salt: String
 });
 userSchema.pre("save", async function (next) {
   this.salt = shortId.generate();

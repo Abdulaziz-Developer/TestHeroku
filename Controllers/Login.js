@@ -1,13 +1,8 @@
 const userModel = require("../models/user");
-const bodyParser = require("body-parser");
 const hashPassword = require("../helper");
 const jwt = require("jsonwebtoken");
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
-
-module.exports =
-  (urlencodedParser,
-  async (req, res) => {
+module.exports = async (req, res) => {
     try {
       const { email, password } = req.body;
 
@@ -33,4 +28,4 @@ module.exports =
     } catch (error) {
       console.log(error);
     }
-  });
+  };
